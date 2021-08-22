@@ -1,4 +1,4 @@
-# proxy-sevice
+# Proxy-Sevice
 Server to redirect websites to simulate a proxy process
 Made in spring boot and java technologies
 
