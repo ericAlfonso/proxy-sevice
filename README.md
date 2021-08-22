@@ -1,2 +1,2 @@
 # proxy-sevice
-Server to manipulate redirect  pages to simulate a proxy process
+Server to redirect websites to simulate a proxy process
