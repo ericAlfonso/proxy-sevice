@@ -28,6 +28,10 @@ public class ProxyController {
 	public RedirectView redirectWithUsingRedirectView(HttpServletRequest request,
 			@RequestParam(name = "url-website", required = true) final String url) {
 		log.info("{} Headers", request.getHeaderNames().nextElement());
+		while(request.getHeaderNames().hasMoreElements()) {
+			Object o = request.getHeaderNames().nextElement();
+			log.info("{} Header ", o);
+		}
 		return new RedirectView(url);
 	}
 
@@ -36,6 +40,10 @@ public class ProxyController {
 	public ResponseEntity<Object> redirect(HttpServletRequest request, @RequestBody ProxyForm form)
 			throws URISyntaxException {
 		log.info("{} Headers", request.getHeaderNames().nextElement());
+		while(request.getHeaderNames().hasMoreElements()) {
+			Object o = request.getHeaderNames().nextElement();
+			log.info("{} Header ", o);
+		}
 
 		URI uri = new URI(form.getUrl());
 
